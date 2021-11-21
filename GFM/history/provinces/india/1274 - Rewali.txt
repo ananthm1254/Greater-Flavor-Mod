@@ -2,6 +2,6 @@ owner = BUN
 controller = BUN
 add_core = BUN
 add_core = MUG
-add_core = HND
+add_core = TRA
 trade_goods = cattle
 life_rating = 32

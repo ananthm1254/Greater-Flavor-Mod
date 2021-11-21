@@ -2,6 +2,6 @@ owner = BUN
 controller = BUN
 add_core = NAG
 add_core = BUN
-add_core = HND
+add_core = TRA
 trade_goods = grain
 life_rating = 32

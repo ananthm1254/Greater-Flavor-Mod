@@ -2,6 +2,6 @@ owner = BHP
 controller = BHP
 add_core = BHP
 add_core = PNJ
-add_core = HND
+add_core = TRA
 trade_goods = cattle
 life_rating = 32
