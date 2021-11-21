@@ -2,6 +2,6 @@ owner = HYD
 controller = HYD
 add_core = HYD
 add_core = NAG
-add_core = HND
+add_core = TRA
 trade_goods = cattle
 life_rating = 32

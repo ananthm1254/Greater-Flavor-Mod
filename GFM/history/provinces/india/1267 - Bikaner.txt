@@ -2,6 +2,6 @@ owner = BIK
 controller = BIK
 add_core = BIK
 add_core = MUG
-add_core = HND
+add_core = TRA
 trade_goods = wool
 life_rating = 32

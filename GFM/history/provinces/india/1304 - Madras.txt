@@ -1,12 +1,12 @@
-owner = EIC
-controller = EIC
+owner = TRA
+controller = TRA
 add_core = HYD
 add_core = MYS
 add_core = KRN
-add_core = HND
+add_core = TRA
 trade_goods = cotton
 life_rating = 32
 terrain = madras
-colonial = 2
+
 fort = 1
 naval_base = 2
