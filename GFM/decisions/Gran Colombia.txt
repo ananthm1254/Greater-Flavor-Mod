@@ -54,10 +54,14 @@ political_decisions = {
                     vassal_of = THIS
                     all_core = {
                         OR = {
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
                             owned_by = THIS
                             province_id = 2243
                             province_id = 2242
                             province_id = 2287
+							province_id = 3568
+							province_id = 830
                         }
                     }
                 }
@@ -68,10 +72,14 @@ political_decisions = {
                     vassal_of = THIS
                     all_core = {
                         OR = {
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
                             owned_by = THIS
                             province_id = 2243
                             province_id = 2242
                             province_id = 2287
+							province_id = 3568
+							province_id = 830
                         }
                     }
                 }
@@ -82,10 +90,14 @@ political_decisions = {
                     vassal_of = THIS
                     all_core = {
                         OR = {
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
                             owned_by = THIS
                             province_id = 2243
                             province_id = 2242
                             province_id = 2287
+							province_id = 3568
+							province_id = 830
                         }
                     }
                 }

@@ -412,109 +412,6 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    french_louisiana = {
-        picture = new_france_louisiana
-        potential = {
-            primary_culture = french
-            is_greater_power = yes
-            capital = 425
-            has_country_flag = french_total_victory
-            has_country_flag = french_america
-            has_country_flag = canada_organized
-			OR = { USA = { exists = yes } US2 = { exists = yes } }
-            NOT = {
-                has_country_flag = war_for_louisiana
-                exists = ULA
-                exists = FCA
-            }
-        }
-
-        allow = {
-            war = no
-            NOT = { truce_with = USA }
-			NOT = { truce_with = US2 }
-            NOT = { war_policy = pacifism }
-            NOT = { revolution_n_counterrevolution = 1 }
-        }
-
-        effect = {
-            badboy = 25
-            USA = {
-                add_casus_belli = {
-                    target = THIS
-                    type = cut_down_to_size
-                    months = 60
-                }
-            }
-            US2 = {
-                add_casus_belli = {
-                    target = THIS
-                    type = cut_down_to_size
-                    months = 60
-                }
-            }
-            FRA = { set_country_flag = war_for_louisiana }
-            BOR = { set_country_flag = war_for_louisiana }
-            relation = { who = USA value = -200 }
-            relation = { who = US2 value = -200 }
-            diplomatic_influence = { who = USA value = -200 }
-            diplomatic_influence = { who = US2 value = -200 }
-            leave_alliance = USA
-            leave_alliance = US2
-            random_country = { limit = { tag = USA vassal_of = THIS } THIS = { release_vassal = USA } }
-            random_country = { limit = { tag = US2 vassal_of = THIS } THIS = { release_vassal = US2 } }
-            random_country = { limit = { is_our_vassal = USA NOT = { tag = THIS } } relation = { who = THIS value = -200 } leave_alliance = THIS }
-            random_country = { limit = { is_our_vassal = US2 NOT = { tag = THIS } } relation = { who = THIS value = -200 } leave_alliance = THIS }
-            any_pop = { dominant_issue = { factor = 0.05 value = jingoism } consciousness = 2 }
-            random_owned = {
-				limit = {
-					owner = { USA = { exists = yes } }
-				}
-				owner = {
-					war = {
-						target = USA
-						attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
-						defender_goal = { casus_belli = cut_down_to_size_no_infamy }
-					}
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { US2 = { exists = yes } }
-				}
-				owner = {
-					war = {
-						target = US2
-						attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
-						defender_goal = { casus_belli = cut_down_to_size_no_infamy }
-					}
-				}
-			}
-            any_pop = {
-                limit = {
-                    OR = {
-                        has_pop_culture = mexican
-                        has_pop_culture = yankee
-                        has_pop_culture = british
-                        has_pop_culture = anglo_canadian
-                    }
-                }
-                militancy = 6
-            }
-            any_country = {
-                limit = {
-                    is_greater_power = yes
-                    NOT = { truce_with = THIS }
-                }
-                casus_belli = {
-                    target = THIS
-                    type = cut_down_to_size
-                    months = 24
-                }
-            }
-        }
-    }
-
     treaty_of_new_york = {
         picture = establish_panfrenchism
         potential = {
@@ -779,40 +676,6 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    become_the_fsa_french_lousiana = {
-        potential = {
-			OR = {
-				tag = USA
-				tag = US2
-			}
-            ai = yes
-            NOT = { owns = 139 }
-            has_global_flag = treaty_of_new_york
-            exists = CSA
-            NOT = { has_country_modifier = no_more_war }
-            has_global_flag = american_civil_war_has_happened
-        }
-
-        allow = {
-            war = no
-        }
-
-        effect = {
-            release_vassal = CAL
-            release_vassal = DES
-            release_vassal = TEX
-            any_owned = {
-                limit = {
-					is_core = THIS
-                }
-                add_core = FSA
-            }
-            change_tag = FSA
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
     organize_louisiana    = {
         picture = "new_france_louisiana"
         potential = {
@@ -1031,8 +894,11 @@ political_decisions = {
                 }
                 secede_province = D01
             }
+			# Audax Validator "." Ignore_NEXT
             D01 = {
+				# Audax Validator "." Ignore_NEXT
                 146 = { assimilate = yes }
+				# Audax Validator "." Ignore_NEXT
                 143 = { assimilate = yes }
             }
             THIS = { inherit = D01 }
@@ -1188,7 +1054,6 @@ political_decisions = {
             2513 = { change_province_name = "Michel" }
             2515 = { change_province_name = "Jeanne" }
             2516 = { change_province_name = "Akaroa" }
-            2571 = { change_province_name = "Jeanne" }
             any_pop = {
                 limit = { culture = maori }
                 consciousness = 7
@@ -1263,10 +1128,15 @@ political_decisions = {
                 limit = { is_core = NZF }
                 secede_province = UTI
             }
+			# Audax Validator "." Ignore_NEXT
             UTI = {
+				# Audax Validator "." Ignore_NEXT
                 ENG_2513 = { assimilate = yes }
+				# Audax Validator "." Ignore_NEXT
                 2510 = { assimilate = yes }
+				# Audax Validator "." Ignore_NEXT
                 2511 = { assimilate = yes }
+				# Audax Validator "." Ignore_NEXT
                 2512 = { assimilate = yes }
             }
             inherit = UTI
@@ -1512,6 +1382,7 @@ political_decisions = {
                 limit = { is_core = FAS }
                 secede_province = UTI
             }
+			# Audax Validator "." Ignore_NEXT
             ENG_2468 = { assimilate = yes }
             THIS = { inherit = UTI }
             any_owned = {

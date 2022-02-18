@@ -123,7 +123,7 @@
     }
 
     farmers = {
-        culture = hungarian
+        culture = magyarab
         religion = sunni
         size = 400
     }
@@ -271,7 +271,19 @@
     farmers = {
         culture = misri
         religion = sunni
-        size = 79238
+        size = 73238
+    }
+
+    clergymen = {
+        culture = greek
+        religion = orthodox
+        size = 50
+    }
+
+    artisans = {
+        culture = greek
+        religion = orthodox
+        size = 5950
     }
 
     clergymen = {
@@ -339,7 +351,7 @@
     farmers = {
         culture = misri
         religion = sunni
-        size = 75625
+        size = 74625
     }
 
     clergymen = {
@@ -358,6 +370,18 @@
         culture = copt
         religion = coptic
         size = 1875
+    }
+
+    clergymen = {
+        culture = greek
+        religion = orthodox
+        size = 50
+    }
+
+    artisans = {
+        culture = greek
+        religion = orthodox
+        size = 950
     }
 }
 #Mansura (256200/64050 POPS)
@@ -407,7 +431,19 @@
     farmers = {
         culture = misri
         religion = sunni
-        size = 54700
+        size = 53700
+    }
+
+    clergymen = {
+        culture = greek
+        religion = orthodox
+        size = 50
+    }
+
+    artisans = {
+        culture = greek
+        religion = orthodox
+        size = 950
     }
 
     clergymen = {
@@ -643,7 +679,7 @@
     farmers = {
         culture = misri
         religion = sunni
-        size = 116725
+        size = 109725
     }
 
     bureaucrats = {
@@ -691,7 +727,7 @@
     artisans = {
         culture = greek
         religion = orthodox
-        size = 1950
+        size = 8950
     }
 
     slaves = {
@@ -823,7 +859,19 @@
     farmers = {
         culture = bedouin
         religion = sunni
-        size = 3650
+        size = 1810
+    }
+	
+	farmers = {
+        culture = siwi
+        religion = sunni
+        size = 900
+    }
+	
+	farmers = {
+        culture = kara
+        religion = sunni
+        size = 840
     }
 }
 #Sinai Region (100000)
@@ -1027,7 +1075,13 @@
     farmers = {
         culture = bedouin
         religion = sunni
-        size = 1800
+        size = 930
+    }
+	
+	farmers = {
+        culture = siwi
+        religion = sunni
+        size = 870
     }
 }
 #Bawiti (12000/3000 POPS)
@@ -1279,7 +1333,7 @@
     }
 
     farmers = {
-        culture = hungarian
+        culture = magyarab
         religion = sunni
         size = 1000
     }
@@ -1385,7 +1439,7 @@
     }
 
     farmers = {
-        culture = hungarian
+        culture = magyarab
         religion = sunni
         size = 1000
     }
@@ -1455,7 +1509,7 @@
     }
 
     farmers = {
-        culture = hungarian
+        culture = magyarab
         religion = sunni
         size = 1000
     }
@@ -1517,7 +1571,7 @@
     }
 
     farmers = {
-        culture = hungarian
+        culture = magyarab
         religion = sunni
         size = 1000
     }

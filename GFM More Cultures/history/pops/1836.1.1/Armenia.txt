@@ -59,7 +59,13 @@
     farmers = {
         culture = armenian
         religion = coptic
-        size = 11750
+        size = 11550
+    }
+
+    farmers = {
+        culture = molokan
+        religion = orthodox
+        size = 200
     }
 
     farmers = {
@@ -95,7 +101,19 @@
     farmers = {
         culture = azerbaijani
         religion = shiite
-        size = 16500
+        size = 15850
+    }
+	
+	farmers = {
+		culture = qajar
+		religion = shiite
+		size = 600
+	}
+
+    farmers = {
+        culture = lom_people
+        religion = shiite
+        size = 50
     }
 
     aristocrats = {
@@ -164,7 +182,13 @@
     farmers = {
         culture = mashriqi
         religion = shiite
-        size = 12000
+        size = 8000
+    }
+	
+	farmers = {
+        culture = marsh_arab
+        religion = shiite
+        size = 4000
     }
 
     aristocrats = {
@@ -279,7 +303,19 @@
     farmers = {
         culture = armenian
         religion = coptic
-        size = 13750
+        size = 13125
+    }
+
+    farmers = {
+        culture = molokan
+        religion = orthodox
+        size = 400
+    }
+
+    farmers = {
+        culture = lom_people
+        religion = coptic
+        size = 50
     }
 	
 	aristocrats = {
@@ -334,6 +370,12 @@
         culture = georgian
         religion = orthodox
         size = 925
+    }
+
+    farmers = {
+        culture = urum
+        religion = orthodox
+        size = 175
     }
 
     farmers = {
@@ -397,8 +439,20 @@
     farmers = {
         culture = azerbaijani
         religion = shiite
-        size = 6000
+        size = 3400
     }
+	
+	farmers = {
+		culture = qajar
+		religion = shiite
+		size = 1800
+	}
+	
+	farmers = {
+		culture = shahsevan
+		religion = shiite
+		size = 800
+	}
 	
 	farmers = {
         culture = kurdish
@@ -459,8 +513,14 @@
     farmers = {
         culture = azerbaijani
         religion = shiite
-        size = 9000
+        size = 8100
     }
+	
+	farmers = {
+		culture = qajar
+		religion = shiite
+		size = 900
+	}
 	
 	farmers = {
         culture = kurdish

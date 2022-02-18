@@ -46,7 +46,7 @@
     farmers = {
         culture = south_german
         religion = reformed
-        size = 64590
+        size = 64460
     }
 
     aristocrats = {
@@ -88,7 +88,19 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 45720
+        size = 45380
+    }
+	
+	farmers = {
+        culture = gypsy
+        religion = catholic
+        size = 340
+    }
+	
+	farmers = {
+        culture = yenish
+        religion = protestant
+        size = 130
     }
 
     ######Jews
@@ -400,13 +412,19 @@
     farmers = {
         culture = arpitan
         religion = catholic
-        size = 21230
+        size = 21110
     }
 	
 	farmers = {
         culture = french
         religion = catholic
         size = 10000
+    }
+	
+	farmers = {
+        culture = gypsy
+        religion = catholic
+        size = 120
     }
 }
 3317 = {
@@ -501,6 +519,7 @@
         religion = reformed
         size = 100
     }
+	
     aristocrats = {
         culture = arpitan
         religion = reformed
@@ -531,7 +550,7 @@
         size = 10625
     }
 }
-#Sitten (72000/18000) POPS
+#Sitten (72000/18000 POPS)
 609 = {
     aristocrats = {
         culture = arpitan
@@ -568,49 +587,49 @@
 #Lugano (108000/27000 POPS)
 2568 = {
     aristocrats = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 250
     }
 
     bureaucrats = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 100
     }
 
     officers = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 50
     }
 
     clergymen = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 275
     }
 
     artisans = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 1250
     }
 
     soldiers = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 1100
     }
 
     farmers = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 30675
     }
 
     farmers = {
-        culture = north_italian
+        culture = galloitalian
         religion = catholic
         size = 2400
     }
@@ -644,7 +663,7 @@
     farmers = {
         culture = romansh
         religion = catholic
-        size = 11275
+        size = 11035
     }
 
     aristocrats = {
@@ -675,6 +694,12 @@
         culture = south_german
         religion = reformed
         size = 6475
+    }
+	
+	farmers = {
+        culture = yenish
+        religion = protestant
+        size = 240
     }
 
 }
@@ -818,7 +843,49 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 14550
+        size = 11550
+    }
+
+    aristocrats = {
+        culture = arpitan
+        religion = catholic
+        size = 30
+    }
+
+    bureaucrats = {
+        culture = arpitan
+        religion = catholic
+        size = 8
+    }
+
+    officers = {
+        culture = arpitan
+        religion = catholic
+        size = 5
+    }
+
+    clergymen = {
+        culture = arpitan
+        religion = catholic
+        size = 35
+    }
+
+    artisans = {
+        culture = arpitan
+        religion = catholic
+        size = 300
+    }
+
+    soldiers = {
+        culture = arpitan
+        religion = catholic
+        size = 110
+    }
+
+    farmers = {
+        culture = arpitan
+        religion = catholic
+        size = 2530
     }
 }
 
@@ -851,6 +918,49 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 11135
+        size = 9835
     }
+	
+	aristocrats = {
+        culture = galloitalian
+        religion = catholic
+        size = 25
+    }
+
+    bureaucrats = {
+        culture = galloitalian
+        religion = catholic
+        size = 10
+    }
+
+    officers = {
+        culture = galloitalian
+        religion = catholic
+        size = 5
+    }
+
+    clergymen = {
+        culture = galloitalian
+        religion = catholic
+        size = 27
+    }
+
+    artisans = {
+        culture = galloitalian
+        religion = catholic
+        size = 20
+    }
+
+    soldiers = {
+        culture = galloitalian
+        religion = catholic
+        size = 10
+    }
+
+    farmers = {
+        culture = galloitalian
+        religion = catholic
+        size = 1375
+    }
+
 }

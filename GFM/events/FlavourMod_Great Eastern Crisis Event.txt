@@ -7,10 +7,8 @@ country_event = {
     major = yes
 
     trigger = {
-        AND = {
-            tag = RUS
-            is_disarmed = no
-        }
+        tag = RUS
+        is_disarmed = no
         is_greater_power = yes
         OR = {
             AND = {
@@ -25,11 +23,23 @@ country_event = {
                 OR = {
                     TUR = {
                         war_with = ROM
+                    }
+                    TUR = {
                         war_with = GRE
+                    }
+                    TUR = {
                         war_with = BUL
+                    }
+                    TUR = {
                         war_with = SER
+                    }
+                    TUR = {
                         war_with = MON
+                    }
+                    TUR = {
                         war_with = BOS
+                    }
+                    TUR = {
                         war_with = ALB
                     }
                 }
@@ -726,10 +736,10 @@ country_event = {
         TUR_806 = { remove_core = TUR } # N.Macedonia
         TUR_805 = { remove_core = TUR } # W.Macedonia
         TUR_855 = { remove_core = TUR } # Cyprus
+		TUR_823 = { remove_core = TUR } # Thrace
         847 = { remove_core = TUR } #Chania
         848 = { remove_core = TUR } #Iraklion
         EGY_843 = { remove_core = TUR } #Aegean Islands
-        TUR_860 = { remove_core = TUR } #Thrace
 
         #Secede Istanbul, Kars to Russia
         random_owned = {
@@ -1005,14 +1015,21 @@ country_event = {
         }
         random_owned = {
             limit = {
-                province_id = 828 #Edrine
+                province_id = 828 #Edirne
                 owned_by = TUR
             }
             secede_province = BUL
         }
         random_owned = {
             limit = {
-                province_id = 858 #Kirklareli
+                province_id = 3302 #Edirne
+                owned_by = TUR
+            }
+            secede_province = BUL
+        }
+        random_owned = {
+            limit = {
+                province_id = 3470 #Edirne
                 owned_by = TUR
             }
             secede_province = BUL
@@ -1040,6 +1057,14 @@ country_event = {
                 vassal_of = TUR
             }
             TUR = { release_vassal = MON }
+        }
+        random_owned = {
+            limit = {
+                province_id = 804
+                BOS = { exists = no }
+                SER = { exists = yes }
+            }
+            secede_province = SER
         }
         any_country = {
             limit = {
@@ -1259,6 +1284,36 @@ country_event = {
 		random_owned = {
             limit = {
                 province_id = 822
+                owned_by = TUR
+            }
+            secede_province = GRE
+        }
+		
+		#What if the Ottoman AI trollishly took over Athens
+		random_owned = {
+            limit = {
+                province_id = 834
+                owned_by = TUR
+            }
+            secede_province = GRE
+        }
+		random_owned = {
+            limit = {
+                province_id = 835
+                owned_by = TUR
+            }
+            secede_province = GRE
+        }
+		random_owned = {
+            limit = {
+                province_id = 836
+                owned_by = TUR
+            }
+            secede_province = GRE
+        }
+		random_owned = {
+            limit = {
+                province_id = 837
                 owned_by = TUR
             }
             secede_province = GRE

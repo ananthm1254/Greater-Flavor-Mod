@@ -223,13 +223,25 @@
     farmers = {
         culture = slovak
         religion = catholic
-        size = 59400
+        size = 51400
+    }
+
+    farmers = {
+        culture = goral
+        religion = catholic
+        size = 8000
     }
 
     serfs = {
         culture = slovak
         religion = catholic
-        size = 27000
+        size = 26955
+    }
+	
+	serfs = {
+        culture = silesian
+        religion = catholic
+        size = 45
     }
 
     clergymen = {
@@ -473,7 +485,19 @@
     farmers = {
         culture = slovak
         religion = catholic
-        size = 39375
+        size = 24875
+    }
+	
+	farmers = {
+        culture = lemko
+        religion = orthodox
+        size = 2500
+    }
+
+    farmers = {
+        culture = goral
+        religion = catholic
+        size = 12000
     }
 
     farmers = {
@@ -797,7 +821,19 @@
     farmers = {
         culture = slovak
         religion = catholic
-        size = 21900
+        size = 8900
+    }
+	
+	farmers = {
+        culture = lemko
+        religion = orthodox
+        size = 8000
+    }
+
+    farmers = {
+        culture = goral
+        religion = catholic
+        size = 7000
     }
 
     aristocrats = {
@@ -831,26 +867,26 @@
     }
 
     clergymen = {
-        culture = ukrainian
+        culture = boyko
         religion = orthodox
         size = 100
     }
 
     artisans = {
-        culture = ukrainian
+        culture = boyko
         religion = orthodox
         size = 200
     }
 
     soldiers = {
-        culture = ukrainian
+        culture = boyko
         religion = orthodox
         size = 100
     }
 
     serfs = {
-        culture = ukrainian
+        culture = boyko
         religion = orthodox
-        size = 4000
+        size = 2000
     }
 }

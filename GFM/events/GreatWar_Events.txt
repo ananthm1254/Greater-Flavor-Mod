@@ -135,6 +135,7 @@ country_event = {
                 war = no
             }
             THIS = {
+				# Audax Validator "." Ignore_NEXT
                 war = {
                     attacker_goal = {
                         casus_belli = call_allies_cb
@@ -621,7 +622,7 @@ country_event = {
                 tag = CZH
                 exists = no
                 THIS = {
-                    owns = 625
+                    owns = 3483
                     owns = 633
                 }
                 NOT = { exists = BOH }
@@ -3132,7 +3133,7 @@ country_event = {
                 tag = CZH
                 exists = no
                 THIS = {
-                    owns = 625
+                    owns = 3483
                     owns = 633
                 }
                 NOT = { exists = BOH }
@@ -7542,7 +7543,6 @@ country_event = {
             3313 = { secede_province = ITA }
             467 = { secede_province = ITA }
             3432 = { secede_province = ITA }
-            468 = { secede_province = ITA }
             469 = { secede_province = ITA }
             470 = { secede_province = ITA }
             471 = { secede_province = ITA }
@@ -8485,7 +8485,7 @@ country_event = {
                 tag = CZH
                 exists = no
                 THIS = {
-                    owns = 625
+                    owns = 3483
                     owns = 633
                 }
                 NOT = { exists = BOH }
@@ -9246,10 +9246,22 @@ country_event = {
                         has_country_flag = coalition_member
                     }
                 }
-                owns = 830
-                THIS = { owns = 828 }
+                owns = 3304
+                THIS = { owns = 828 owns = 3470 }
             }
             828 = {
+                add_core = GRE
+                secede_province = GRE
+                add_province_modifier = {
+                    name = nationalist_agitation
+                    duration = 1095
+                }
+                any_pop = {
+                    limit = { has_pop_culture = turkish }
+                    militancy = 10
+                }
+            }
+            3470 = {
                 add_core = GRE
                 secede_province = GRE
                 add_province_modifier = {
@@ -11944,6 +11956,7 @@ country_event = {
                 remove_core = NIG
                 remove_core = SOK
                 remove_core = DND
+				remove_core = BGU
                 remove_core = TOU
                 remove_core = OYO
                 remove_core = BEN
@@ -12260,4 +12273,21 @@ country_event = {
         }
 
     }
+}
+
+# Audax Validator "." Ignore_NEXT
+country_event = {
+	id = 4435
+	title = "We're no strangers to love"
+	desc = "RICKROLL"
+	picture = "rick_astley"
+	is_triggered_only = yes	
+	option = {
+		name = "Never gonna make you cry, never gonna say goodbye, never gonna tell a lie and hurt you."
+		# Audax Validator "." Ignore_NEXT
+		add_country_modifier = { 
+			# Audax Validator "." Ignore_NEXT
+			name = rick_rolled duration = -1 
+		}
+	}
 }

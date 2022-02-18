@@ -51,19 +51,19 @@
     }
 
     labourers = {
-        culture = scottish
+        culture = ulster_scottish
         religion = reformed
         size = 20250
     }
 
     farmers = {
-        culture = scottish
+        culture = ulster_scottish
         religion = reformed
         size = 72875
     }
 
     clergymen = {
-        culture = scottish
+        culture = ulster_scottish
         religion = reformed
         size = 125
     }
@@ -143,13 +143,13 @@
     }
 
     clergymen = {
-        culture = scottish
+        culture = ulster_scottish
         religion = reformed
         size = 250
     }
 
     farmers = {
-        culture = scottish
+        culture = ulster_scottish
         religion = reformed
         size = 55000
     }
@@ -187,7 +187,7 @@
     }
 
     labourers = {
-        culture = scottish
+        culture = ulster_scottish
         religion = reformed
         size = 19000
     }
@@ -255,14 +255,14 @@
     }
 
     farmers = {
-        culture = scottish
+        culture = ulster_scottish
         religion = reformed
         size = 10575
     }
 
 
     clergymen = {
-        culture = scottish
+        culture = ulster_scottish
         religion = reformed
         size = 50
     }
@@ -633,7 +633,13 @@
     farmers = {
         culture = irish
         religion = catholic
-        size = 110375
+        size = 110075
+    }
+	
+	farmers = {
+        culture = fingallian
+        religion = catholic
+        size = 300
     }
 }
 #Kildare (532000/133000 POPs)
@@ -770,7 +776,13 @@
     farmers = {
         culture = irish
         religion = catholic
-        size = 103000
+        size = 102600
+    }
+	
+	farmers = {
+        culture = yola
+        religion = catholic
+        size = 400
     }
 
 }

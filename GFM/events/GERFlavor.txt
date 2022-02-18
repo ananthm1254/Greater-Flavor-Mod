@@ -723,6 +723,7 @@ country_event = {
     option = {
         name = "EVT33015OPTA"
         set_country_flag = called_german_allies
+		# Audax Validator "." Ignore_NEXT
         war = {
             attacker_goal = { casus_belli = call_allies_cb }
             call_ally = yes
@@ -766,7 +767,7 @@ country_event = {
         random_country = {
             limit = {
                 tag = GER
-                THIS = { tag = AUS }
+                AUS = { ai = no }
             }
             diplomatic_influence = { who = THIS value = 200 }
         }
@@ -1715,13 +1716,19 @@ country_event = {
         is_disarmed = no
         money = 75001
         num_of_ports = 3
-        total_amount_of_ships = 35
+        total_amount_of_ships = 25
         NOT = { any_greater_power = { war_with = THIS } }
         NOT = { war_policy = pacifism }
         NOT = { war_exhaustion = 5 }
         NOT = { has_country_flag = german_new_guinea_company }
-        NOT = { invention = the_dark_continent }
         NOT = { has_global_flag = colonial_railroading_disabled }
+		2531 = { empty = yes }
+		2530 = { empty = yes }
+		1531 = { empty = yes }
+		2537 = { empty = yes }
+		2539 = { empty = yes }
+		2534 = { empty = yes }
+		2536 = { empty = yes }
     }
 
     mean_time_to_happen = {
@@ -2151,7 +2158,7 @@ country_event = {
         badboy = -2
         prestige = 5
         381 = { remove_core = BEL }
-        3377 = { remove_core = BEL remove_core = NET }
+        3377 = { remove_core = BEL remove_core = NET add_core = LUX }
         397 = { remove_core = BEL remove_core = NET }
         398 = { remove_core = NET add_core = LUX }
         # Any Luxembourg lands given to Luxembourg, it is freed if vassaled
@@ -2643,11 +2650,11 @@ country_event = {
             factor = 99
             modifier = {
                 factor = 0
-                AND = { in_sphere = KUK KUK = { ai = no exists = yes } }
+                in_sphere = KUK KUK = { ai = no exists = yes }
             }
             modifier = {
                 factor = 0
-                AND = { in_sphere = AUS AUS = { ai = no exists = yes } }
+                in_sphere = AUS AUS = { ai = no exists = yes }
             }
         }
     }
@@ -2662,11 +2669,11 @@ country_event = {
             factor = 1
             modifier = {
                 factor = 100
-                AND = { in_sphere = KUK KUK = { ai = no exists = yes } }
+                in_sphere = KUK KUK = { ai = no exists = yes }
             }
             modifier = {
                 factor = 100
-                AND = { in_sphere = AUS AUS = { ai = no exists = yes } }
+                in_sphere = AUS AUS = { ai = no exists = yes }
             }
         }
     }
@@ -2714,7 +2721,7 @@ country_event = {
         owns = 544
         OR = {
             tag = GER
-            #tag = GCF
+            tag = GCF
         }
         NOT = { capital = 599 }
         is_disarmed = no

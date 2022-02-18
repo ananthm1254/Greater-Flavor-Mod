@@ -505,7 +505,7 @@ diplomacy = {
 	
 	MIN_WARSCORE_TO_INTERVENE = -1,
 	MIN_MONTHS_TO_INTERVENE = 0,
-	MAX_WARSCORE_FROM_BATTLES = 25,
+	MAX_WARSCORE_FROM_BATTLES = 35,
 	
 	GUNBOAT_DIPLOMATIC_COST = 1,
 	GUNBOAT_RELATION_ON_ACCEPT = 1,
@@ -697,8 +697,8 @@ ai =
 	COLONY_WEIGHT = 4.0, -- ai weight for colonising
 	ADMINISTRATOR_WEIGHT = 15.0, -- ai weight for new bureaucrat
 	INDUSTRYWORKER_WEIGHT = 10.0, -- ai weight for new industry workers
-	EDUCATOR_WEIGHT = 25.0, -- ai weigth for new clergy
-	SOLDIER_WEIGHT = 35.0, -- ai weight for soldiers
+	EDUCATOR_WEIGHT = 28.0, -- ai weigth for new clergy
+	SOLDIER_WEIGHT = 32.0, -- ai weight for soldiers
 	SOLDIER_FRACTION = 0.045, -- max amount of population AI wants to be soldiers
 	CAPITALIST_FRACTION = 0.007, -- max amount of population AI wants to be capis
 	PRODUCTION_WEIGHT = 0.05, -- ai weight for new production

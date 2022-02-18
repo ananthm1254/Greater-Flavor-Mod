@@ -78,4 +78,5 @@ set_country_flag = isolationist
 consciousness = 0
 nonstate_consciousness = 0
 
+
 oob = "PRG_oob.txt"

@@ -2832,7 +2832,7 @@ country_event = {
             relation = { who = KAS value = 400 }
             KAS = {
                 civilized = no
-                government = absolute_monarchy
+                government = colonial_company
                 any_pop = { militancy = 1 consciousness = 2 }
                 military_reform = yes_foreign_weapons
                 military_reform = yes_foreign_training
@@ -3356,7 +3356,8 @@ country_event = {
     mean_time_to_happen = { months = 2 }
 
     option = {
-        name = "EVTOPTA315003"
+        name = "EVTOPTA315003"		
+		# Audax Validator "." Ignore_NEXT
         random_owned = { limit = { is_capital = yes } assimilate = yes }
         any_pop = { limit = { NOT = { is_primary_culture = yes } } militancy = 3 consciousness = 4 }
         any_owned = { limit = { is_core = THIS } add_province_modifier = { name = cultural_resurgence duration = 3650 } }
@@ -3370,6 +3371,7 @@ country_event = {
     title = "EVTNAME315004"
     desc = "EVTDESC315004"
     news = yes
+	major = yes
     news_desc_long = "EVTDESC315004_NEWS_LONG"
     news_desc_medium = "EVTDESC315004_NEWS_MEDIUM"
     news_desc_short = "EVTDESC315004_NEWS_SHORT"
@@ -3392,14 +3394,28 @@ country_event = {
 
     option = {
         name = "EVTOPTA315004"
-        random_owned = { limit = { owner = { tag = ENG } } owner = { prestige = 15 relation = { who = USA value = 10 } relation = { who = US2 value = 10 } } }
-        random_owned = { limit = { OR = { owner = { tag = USA } owner = { tag = US2 } } }
-            owner = {
-                prestige = 15
-                relation = { who = ENG value = 10 }
-                ENG = { country_event = 315004 }
-            }
-        }
+        prestige = 15
+        relation = { who = ENG value = 10 }
+        ENG = { country_event = 3150041 }
+    }
+}
+
+
+#David Livingstone is Found
+country_event = {
+
+    id = 3150041
+    title = "EVTNAME315004"
+    desc = "EVTDESC315004"
+    picture = "dr_livingstone"
+	is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA315004"
+        prestige = 15 
+		relation = { who = USA value = 10 } 
+		relation = { who = US2 value = 10 }
     }
 }
 
@@ -3427,11 +3443,11 @@ country_event = {
         months = 36 #Three years
         modifier = {
             factor = 1.50
-            AND = { relation = { who = USA value = 100 } exists = USA }
+            relation = { who = USA value = 100 } exists = USA
         }
         modifier = {
             factor = 1.50
-            AND = { relation = { who = US2 value = 100 } exists = US2 }
+            relation = { who = US2 value = 100 } exists = US2
         }
     }
 
@@ -4233,6 +4249,33 @@ province_event = {
     }
 }
 
+#Malta Sette Guigno
+country_event = {
+    id = 99108
+    title = "EVTNAME99108"
+    desc = "EVTDESC99108"
+	picture = "sette_uigno"
+    fire_only_once = yes
+
+    trigger = {
+	year = 1919
+	854 = { owned_by = THIS }
+	NOT = { year = 1921 }
+	}
+	
+    mean_time_to_happen = { months = 3 }
+
+    option = {
+        name = "EVT99108OPT"
+		854 = {
+			any_pop = {
+			militancy = 5
+			consciousness = 6
+			}
+		}
+	}
+}
+
 #####################################################
 #British Home Events#
 #####################################################
@@ -4984,5 +5027,50 @@ country_event = {
 				secede_province = THIS
 			}
 		}
+	}
+}
+
+country_event = {
+	id = 17141715
+	picture = "leicester_baloon"
+	title = "EVTNAME999101"
+	desc = "EVTDESC999101"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 289
+		year = 1864
+	}
+	
+	mean_time_to_happen = { months = 7 }
+	
+	option = {
+		name = "Ignorant peasants..."
+		prestige = -2
+	}
+}
+
+country_event = {
+	id = 16121912
+	picture = "thames_tunnel"
+	title = "EVTNAME16121912"
+    desc = "EVTDESC16121912"
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 300
+		year = 1843
+		war = no
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Excellent."
+		prestige = 5
+		300 = { infrastructure = 1 }
+		any_pop = { limit = { location = { province_id = 300 } } consciousness = 1 }
 	}
 }

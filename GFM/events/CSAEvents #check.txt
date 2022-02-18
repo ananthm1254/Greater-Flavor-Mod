@@ -70,9 +70,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                OR = {
-                    pop_type = slaves
-                }
+                pop_type = slaves
             }
             militancy = 5
         }
@@ -192,9 +190,7 @@ country_event = {
         name = "NEWSLAVESOPTION"
         any_pop = {
             limit = {
-                OR = {
-                    type = slaves
-                }
+                type = slaves
             }
             reduce_pop = 1.04
         }
@@ -1408,6 +1404,7 @@ country_event = {
     trigger = {
         tag = BRZ
         war = no
+		slavery = yes_slavery
         NOT = { has_global_flag = csa_brz_friendship }
         exists = CSA
         relation = {
@@ -3005,9 +3002,7 @@ province_event = {
         any_pop = {
             limit = {
                 NOT = {
-                    OR = {
-                        type = slaves
-                    }
+                    type = slaves
                 }
             }
             consciousness = 0.5
@@ -3651,7 +3646,7 @@ country_event = {
             country_event = 187943
         }
         ai_chance = {
-            factor = 80
+            factor = 90
             modifier = {
                 factor = 0
                 OR = {
@@ -3698,7 +3693,7 @@ country_event = {
             country_event = 187944
         }
         ai_chance = {
-            factor = 20
+            factor = 10
             modifier = {
                 factor = 1.5
                 OR = {

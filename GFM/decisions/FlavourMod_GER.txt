@@ -236,7 +236,7 @@ political_decisions = {
         allow = {
             controls = 619
             controls = 612
-            controls = 625
+            controls = 3483
             controls = 622
             controls = 616
             OR = {
@@ -280,6 +280,16 @@ political_decisions = {
                 limit = {
                     exists = yes
                     tag = HUN
+                }
+                any_owned = {
+                    limit = { is_core = AUS }
+                    add_core = THIS
+                }
+            }
+            random_country = {
+                limit = {
+                    exists = yes
+                    tag = HUR
                 }
                 any_owned = {
                     limit = { is_core = AUS }
@@ -493,6 +503,11 @@ political_decisions = {
                     truce_with = THIS
                 }
                 HUN = {
+                    ai = yes
+                    exists = yes
+                    truce_with = THIS
+                }
+                HUR = {
                     ai = yes
                     exists = yes
                     truce_with = THIS
@@ -846,40 +861,60 @@ political_decisions = {
             }
             random_owned = {
                 limit = {
-                    province_id = 549 #Berlin
-                    owned_by = PRU
+                    owner = {
+						owns = 549 #Berlin
+						tag = PRU
+					}
                 }
-                PRU = { capital = 549 }
+                owner = { PRU = { capital = 549 } }
             }
             random_owned = {
                 limit = {
-                    province_id = 549 #Berlin
-                    owned_by = NGF
+                    owner = {
+						owns = 549 #Berlin
+						tag = NGF
+					}
                 }
-                NGF = { capital = 549 }
+                owner = { NGF = { capital = 549 } }
             }
             random_owned = {
                 limit = {
-                    province_id = 599 #Munich
-                    owned_by = GCF
-                    owner = { NOT = { has_global_flag = german_confederation_austrian } }
+					owner = {
+						tag = GER
+						owns = 549
+						primary_culture = north_german
+					}
                 }
-                owner = { capital = 599 }
+                owner = { GER = { capital = 549 } }
             }
             random_owned = {
                 limit = {
-                    province_id = 549 #Berlin
-                    owned_by = GER
-                    owner = { primary_culture = north_german }
+					owner = {
+						tag = GER
+						owns = 599
+						primary_culture = south_german
+					}
                 }
-                GER = { capital = 549 }
+                owner = { GER = { capital = 599 } }
             }
             random_owned = {
                 limit = {
-                    province_id = 619 #Vienna
-                    owned_by = GCF
+					owner = {
+						tag = GCF
+						owns = 599
+						NOT = { has_global_flag = german_confederation_austrian }
+					}
                 }
-                GCF = { capital = 619 }
+                owner = { GCF = { capital = 599 } }
+            }
+            random_owned = {
+                limit = {
+					owner = {
+						tag = GCF
+						owns = 619
+					}
+                }
+                owner = { GCF = { capital = 619 } }
             }
         }
 
@@ -1010,6 +1045,7 @@ political_decisions = {
                 limit = {
                     OR = {
                         region = PRU_682 #Lower Silesia
+						region = PRU_685 #Upper Silesia
                         region = PRU_701 #Posen
                         region = PRU_690 #Westpreuﬂen
 
@@ -1115,11 +1151,10 @@ political_decisions = {
             }
             war = {
                 target = FRA
-                attacker_goal = { casus_belli = cut_down_to_size }
-                defender_goal = { casus_belli = cut_down_to_size }
+                attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
+                defender_goal = { casus_belli = cut_down_to_size_no_infamy }
                 call_ally = yes
             }
-            FRA = { badboy = -13 }
         }
 
         ai_will_do = {

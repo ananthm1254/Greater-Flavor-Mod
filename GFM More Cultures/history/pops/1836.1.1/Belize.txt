@@ -42,7 +42,13 @@
     farmers = {
         culture = kreol
         religion = protestant
-        size = 400
+        size = 375
+    }
+	
+	farmers = {
+        culture = garifuna
+        religion = protestant
+        size = 25
     }
 
     farmers = {
@@ -54,13 +60,25 @@
     farmers = {
         culture = central_american
         religion = catholic
-        size = 1058
+        size = 758
     }
 
     farmers = {
         culture = mayan
         religion = catholic
         size = 250
+    }
+	
+	farmers = {
+        culture = mayo
+        religion = catholic
+        size = 100
+    }
+	
+	farmers = {
+        culture = qeqchi
+        religion = catholic
+        size = 200
     }
 
 }

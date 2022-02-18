@@ -41,7 +41,7 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 117125
+        size = 117005
     }
 
     clergymen = {
@@ -66,6 +66,12 @@
         culture = polish
         religion = catholic
         size = 920
+    }
+	
+	farmers = {
+        culture = gypsy
+        religion = catholic
+        size = 120
     }
 
     ######Jews
@@ -215,7 +221,7 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 10250
+        size = 9930
     }
 
     clergymen = {
@@ -240,6 +246,12 @@
         culture = western_slavic
         religion = protestant
         size = 1825
+    }
+	
+	farmers = {
+        culture = gypsy
+        religion = catholic
+        size = 320
     }
 }
 #Brandenburg Region (208000) #see Poland.txt for balance of region
@@ -273,13 +285,19 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 46425
+        size = 46045
     }
 
     farmers = {
         culture = western_slavic
         religion = protestant
         size = 5000
+    }
+	
+	farmers = {
+        culture = gypsy
+        religion = catholic
+        size = 380
     }
 
     ######Jews
@@ -393,7 +411,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 15925
+        size = 15625
     }
 
     aristocrats = {
@@ -447,7 +465,7 @@
     artisans = {
         culture = polish
         religion = catholic
-        size = 1750
+        size = 1730
     }
 
     soldiers = {
@@ -459,7 +477,13 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 31900
+        size = 31700
+    }
+	
+	farmers = {
+        culture = gypsy
+        religion = catholic
+        size = 520
     }
 }
 3336 = {
@@ -951,7 +975,13 @@
     farmers = {
         culture = czech
         religion = catholic
-        size = 3725
+        size = 3385
+    }
+	
+	farmers = {
+        culture = gypsy
+        religion = catholic
+        size = 340
     }
 }
 #Kattowitz (452000/113000 POPS)
@@ -1055,14 +1085,19 @@
     farmers = {
         culture = czech
         religion = catholic
-        size = 9350
+        size = 8480
+    }
+	
+	farmers = {
+        culture = gypsy
+        religion = catholic
+        size = 670
     }
 }
 #under the rule of Austria in 1836
 #Bielsko (204000/52000 POPS) #now part of Poland
-2584= {
-
-clergymen = {
+2584 = {
+	clergymen = {
         culture = czech
         religion = catholic
         size = 15
@@ -1141,7 +1176,6 @@ clergymen = {
     }
 
 }
-
 #West Prussia Region (688000)
 #under the rule of Prussia in 1836
 #Danzig (76000/19000 POPS)
@@ -2589,7 +2623,7 @@ clergymen = {
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 18200
+        size = 19200
     }
 
     aristocrats = {
@@ -2736,6 +2770,30 @@ clergymen = {
         culture = south_german
         religion = catholic
         size = 920
+    }
+	
+	clergymen = {
+        culture = ukrainian
+        religion = orthodox
+        size = 75
+    }
+
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 150
+    }
+
+    soldiers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 75
+    }
+
+    farmers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 9200
     }
 }
 #under the rule of Russia in 1836 (1368000)
@@ -3064,7 +3122,7 @@ clergymen = {
     farmers = {
         culture = polish
         religion = catholic
-        size = 40000
+        size = 37000
     }
 
     serfs = {
@@ -3076,7 +3134,7 @@ clergymen = {
     serfs = {
         culture = ukrainian
         religion = orthodox
-        size = 50000
+        size = 43000
     }
 
     clergymen = {
@@ -3124,14 +3182,122 @@ clergymen = {
     farmers = {
         culture = south_german
         religion = catholic
-        size = 1825
+        size = 1325
     }
 }
 3324 = {
+    aristocrats = {
+        culture = polish
+        religion = catholic
+        size = 3500
+    }
+
+    clergymen = {
+        culture = polish
+        religion = catholic
+        size = 125
+    }
+
+    artisans = {
+        culture = polish
+        religion = catholic
+        size = 750
+    }
+
+    soldiers = {
+        culture = polish
+        religion = catholic
+        size = 145
+    }
+
     farmers = {
         culture = polish
         religion = catholic
-        size = 20000
+        size = 6000
+    }
+
+    serfs = {
+        culture = gypsy
+        religion = catholic
+        size = 175
+    }
+
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 30000
+    }
+
+    clergymen = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+
+    artisans = {
+        culture = ashkenazi
+        religion = jewish
+        size = 600
+    }
+
+    soldiers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100
+    }
+
+    farmers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 2250
+    }
+
+    clergymen = {
+        culture = south_german
+        religion = catholic
+        size = 50
+    }
+
+    artisans = {
+        culture = south_german
+        religion = catholic
+        size = 50
+    }
+
+    soldiers = {
+        culture = south_german
+        religion = catholic
+        size = 50
+    }
+
+    farmers = {
+        culture = south_german
+        religion = catholic
+        size = 420
+    }
+	
+	clergymen = {
+        culture = ukrainian
+        religion = orthodox
+        size = 75
+    }
+
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 150
+    }
+
+    soldiers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 75
+    }
+
+    farmers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 9500
     }
 }
 #Mazovia Region (2224000)
@@ -4008,7 +4174,7 @@ clergymen = {
     clergymen = {
         culture = ashkenazi
         religion = jewish
-        size = 5
+        size = 6
     }
 
     artisans = {

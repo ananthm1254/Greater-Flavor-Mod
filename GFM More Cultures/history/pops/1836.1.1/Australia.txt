@@ -708,7 +708,13 @@
     farmers = {
         culture = british
         religion = anglican
-        size = 8675
+        size = 8620
+    }
+
+    farmers = {
+        culture = palawa
+        religion = animist
+        size = 55
     }
 
     clergymen = {
@@ -1882,13 +1888,13 @@
 #Norfolk Island (1000/250 POPS)
 2508 = {
     clergymen = {
-        culture = australian
+        culture = norfuk
         religion = protestant
         size = 20
     }
 
     farmers = {
-        culture = australian
+        culture = norfuk
         religion = protestant
         size = 235
     }

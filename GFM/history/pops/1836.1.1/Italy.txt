@@ -141,13 +141,13 @@
 	farmers = {
         culture = north_italian
         religion = catholic
-        size = 2600
+        size = 2900
     }
 	
     farmers = {
         culture = arpitan
         religion = catholic
-        size = 10600
+        size = 10800
     }
 }
 3434 = {
@@ -237,7 +237,7 @@
     farmers = {
         culture = north_italian
         religion = catholic
-        size = 10250
+        size = 9750
     }
 
     aristocrats = {
@@ -267,13 +267,13 @@
     farmers = {
         culture = arpitan
         religion = catholic
-        size = 23600
+        size = 25440
     }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 4600
+        size = 4560
     }
 }
 #Novara (212000/53000 POPS)
@@ -575,7 +575,7 @@
     farmers = {
         culture = north_italian
         religion = catholic
-        size = 76975
+        size = 76775
     }
 }
 #Brescia (708000/177000 POPS)
@@ -1044,7 +1044,7 @@
     farmers = {
         culture = north_italian
         religion = catholic
-        size = 7875
+        size = 7775
     }
 
     clergymen = {
@@ -1068,7 +1068,13 @@
     farmers = {
         culture = slovene
         religion = catholic
-        size = 6300
+        size = 6200
+    }
+	
+	farmers = {
+        culture = gypsy
+        religion = catholic
+        size = 200
     }
 }
 #Gorizia (180000/45000 POPS)
@@ -2292,7 +2298,43 @@
     farmers = {
         culture = south_italian
         religion = catholic
-        size = 128800
+        size = 121800
+    }
+	
+	aristocrats = {
+        culture = arpitan
+        religion = catholic
+        size = 11
+    }
+
+    clergymen = {
+        culture = arpitan
+        religion = catholic
+        size = 90
+    }
+
+    artisans = {
+        culture = arpitan
+        religion = catholic
+        size = 50
+    }
+
+    soldiers = {
+        culture = arpitan
+        religion = catholic
+        size = 110
+    }
+
+    farmers = {
+        culture = arpitan
+        religion = catholic
+        size = 5900
+    }
+	
+	farmers = {
+        culture = albanian
+        religion = orthodox
+        size = 1200
     }
 }
 #Brindisi (280000/70000 POPS)
@@ -2382,7 +2424,7 @@
     farmers = {
         culture = south_italian
         religion = catholic
-        size = 119700
+        size = 113700
     }
 
     farmers = {
@@ -2394,7 +2436,7 @@
     farmers = {
         culture = greek
         religion = orthodox
-        size = 2000
+        size = 8000
     }
 }
 #Catanzaro (344000/86000 POPS)
@@ -2426,7 +2468,13 @@
     farmers = {
         culture = south_italian
         religion = catholic
-        size = 76125
+        size = 71625
+    }
+
+    farmers = {
+        culture = greek
+        religion = orthodox
+        size = 4500
     }
 
     farmers = {
@@ -2736,12 +2784,6 @@
         culture = croat
         religion = catholic
         size = 3000
-    }
-	
-	farmers = {
-        culture = albanian
-        religion = orthodox
-        size = 1200
     }
 }
 

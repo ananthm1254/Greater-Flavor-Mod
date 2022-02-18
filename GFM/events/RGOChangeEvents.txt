@@ -2907,10 +2907,12 @@ country_event = {
 			remove_core = NIG
 			remove_core = SOK
 			remove_core = DND
+			remove_core = BGU
 			remove_core = TOU
 			remove_core = OYO
 			remove_core = BEN
 			remove_core = ARO
+			remove_core = BGU
 			remove_core = CLA
 			remove_core = WRI
 			remove_core = KBO
@@ -4225,9 +4227,9 @@ country_event = {
 
     option = {
         name = "EVTOPTC199050" #tobacco Option
-        1819 = { trade_goods = cotton }
-        1818 = { trade_goods = cotton }
-        1820 = { trade_goods = cotton }
+        1819 = { trade_goods = tobacco }
+        1818 = { trade_goods = tobacco }
+        1820 = { trade_goods = tobacco }
 
         ai_chance = {
             factor = 10
@@ -7495,7 +7497,8 @@ country_event = {
         1427 = { trade_goods = coal } #Kota Waringin
 
         1410 = { trade_goods = coal }
-        1404 = { trade_goods = coal }
+        1404 = { trade_goods = iron }
+		set_global_flag = province1404manualiron
 
         1406 = { trade_goods = rubber }
         1398 = { trade_goods = rubber }

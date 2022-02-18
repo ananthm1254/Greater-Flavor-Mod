@@ -523,31 +523,31 @@
 #Pitcairn Islands (160/40 POPS) #british trade post - proclaimed colony 1838
 2552 = {
     aristocrats = {
-        culture = british
+        culture = pitkern
         religion = anglican
         size = 2
     }
 
     clergymen = {
-        culture = british
+        culture = pitkern
         religion = anglican
         size = 2
     }
 
     artisans = {
-        culture = british
+        culture = pitkern
         religion = anglican
         size = 2
     }
 
     soldiers = {
-        culture = british
+        culture = pitkern
         religion = anglican
         size = 2
     }
 
     farmers = {
-        culture = british
+        culture = pitkern
         religion = anglican
         size = 10
     }
@@ -563,31 +563,31 @@
 #Easter Island (3000/750 POPS)
 2336 = {
     aristocrats = {
-        culture = polynesian
+        culture = rapanui
         religion = animist
         size = 15
     }
 
     clergymen = {
-        culture = polynesian
+        culture = rapanui
         religion = animist
         size = 15
     }
 
     artisans = {
-        culture = polynesian
+        culture = rapanui
         religion = animist
         size = 35
     }
 
     soldiers = {
-        culture = polynesian
+        culture = rapanui
         religion = animist
         size = 10
     }
 
     farmers = {
-        culture = polynesian
+        culture = rapanui
         religion = animist
         size = 675
     }
@@ -628,48 +628,4 @@
         size = 30
     }
 
-}
-
-#part of cleanup provinces, don't edit
-3486 = {
-	
-	farmers = {
-        culture = polynesian
-        religion = animist
-        size = 50
-    }
-	
-}
-
-#part of cleanup provinces, don't edit
-3487 = {
-	
-	farmers = {
-        culture = polynesian
-        religion = animist
-        size = 50
-    }
-	
-}
-
-#part of cleanup provinces, don't edit
-3488 = {
-	
-	farmers = {
-        culture = polynesian
-        religion = animist
-        size = 50
-    }
-	
-}
-
-#part of cleanup provinces, don't edit
-3489 = {
-	
-	farmers = {
-        culture = polynesian
-        religion = animist
-        size = 50
-    }
-	
 }

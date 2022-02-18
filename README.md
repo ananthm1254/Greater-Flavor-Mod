@@ -2,9 +2,9 @@
 
 This mod is HFM, but further expanded upon, adding bountiful flavour, provinces, historical accuracy changes, etc
 
-NOTE: If you have problems with downloads from github, use this mirror link. It is updated as often as possible (updated 9/8/21):
+NOTE: If you have problems with downloads from github, use this mirror link. It is updated as often as possible (updated 10/25/21):
 
-https://www.dropbox.com/s/bcbkt9oatptlfgh/GFM%209.8.21.zip?dl=0
+https://www.dropbox.com/s/g6sgolqf1aps298/GFM%2010.25.21.zip?dl=0
 
 News! Absolute gigachad Jay de Brabant has made a submod for GFM adding anime girl flags (the repo also includes regular HFM flags). 
 https://github.com/LePetitJayJay/Victoria-2-Anime-Flags-Mod
@@ -24,7 +24,7 @@ PS: The abandoned RGO submod has also been moved: https://drive.google.com/file/
 5. Start the game, select the mods you want:
   * GFM is standalone - you do not need the original HFM to play.
   * GFM SW Submod is the Shattered World submod.
-  * GFM Low Resolutiom Submod changes files to a lower resolution, to make the gameplay faster.
+  * GFM Low Resolution Submod changes files to a lower resolution, making the gameplay faster.
   * GFM Dynamic Nations Submod adds more flag/naming/colour options for each nation and adds mechanics for this (Eg. Dynamic Dominions). 
        Note: The Large Address Aware Patch is HIGHLY recommended.
   * GFM RGO Submod adds experimental new RGOs
@@ -53,7 +53,7 @@ This expanded version of GFM owes its existence to: (add your name here if you h
 * UlfDerDritte
 * Doble
 * Erling Kristiansen
-* GLitchesHaxBadAudio
+* Wooper Goldberg
 * General Garcia
 * Sarif#2056
 * Dukeçza Victor

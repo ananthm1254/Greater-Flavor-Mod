@@ -248,8 +248,11 @@ political_decisions = {
             NEJ_1157 = { add_core = ARA } #Riyadh
             NEJ_1156 = { add_core = ARA } #Kaf
             HDJ_1151 = { add_core = ARA } #Hedjaz
+			3278 = { add_core = ARA }
             1163 = { add_core = ARA }
             1164 = { add_core = ARA }
+			1156 = { add_core = ARA }
+			2639 = { add_core = ARA }
             1163 = { remove_core = TUR }
             1164 = { remove_core = TUR }
 			922 = { remove_core = ARA }
@@ -258,6 +261,8 @@ political_decisions = {
 			1172 = { remove_core = ARA }
 			1170 = { remove_core = ARA }
 			12 = { remove_core = ARA }
+			1178 = { remove_core = ARA }
+			1179 = { remove_core = ARA }
             random_country = {
                 limit = {
                     tag = NEJ
@@ -489,61 +494,6 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    form_arab_union = {
-    picture = form_arab_union
-        potential = {
-            NOT = { has_country_flag = post_colonial_country }
-            OR = {
-                primary_culture = mashriqi
-                primary_culture = bedouin
-                primary_culture = misri
-            }
-            OR = {
-                has_country_flag = sunni_country
-                has_country_flag = shiite_country
-                has_country_flag = ibadi_country
-            }
-            civilized = yes
-            NOT = {
-                exists = ARU
-                has_global_flag = arab_call_to_union
-            }
-        }
-
-        allow = {
-            war = no
-            rank = 10
-            revolution_n_counterrevolution = 1
-            all_core = { owned_by = THIS }
-			has_recently_lost_war = no
-        }
-
-        effect = {
-            set_global_flag = arab_call_to_union
-            prestige = 20
-            add_accepted_culture = mashriqi
-            add_accepted_culture = misri
-            add_accepted_culture = bedouin
-            all_core = {
-                remove_core = THIS
-                add_core = ARU
-            }
-			any_country = {
-				limit = {
-					vassal_of = THIS
-					is_culture_group = arab
-				}
-				annex_to = THIS
-			}
-            TUR_894 = { remove_core = ARU }
-            EGY_843 = { remove_core = ARU }
-            change_tag = ARU
-            country_event = 98725
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
     form_maghreb = {
         picture = form_maghreb
         potential = {
@@ -721,123 +671,5 @@ political_decisions = {
 
         }
         ai_will_do = { factor = 0 }
-    }
-
-    start_pearl_hunting = {
-        picture = bahrain_trade
-        potential = {
-            ai = yes
-            OR = {
-                1162 = { #Bahrain
-                    NOT = { trade_goods = precious_goods }
-                    NOT = { has_province_modifier = pearl_season }
-                }
-                1167 = { #Abu Dhabi
-                    NOT = { trade_goods = precious_goods }
-                    NOT = { has_province_modifier = pearl_season }
-                }
-                1165 = { #Doha
-                    NOT = { trade_goods = precious_goods }
-                    NOT = { has_province_modifier = pearl_season }
-                }
-
-                2664 = { #Khasab
-                    NOT = { trade_goods = precious_goods }
-                    NOT = { has_province_modifier = pearl_season }
-                }
-            }
-        }
-
-        allow = {
-            month = 4
-            NOT = { month = 6 }
-            NOT = { year = 1909 }
-        }
-
-
-        effect = {
-            1162 = {
-                random_list = {
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 93 } }
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 124 } }
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 155 } }
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 186 } }
-                }
-            }
-            1165 = {
-                random_list = {
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 93 } }
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 124 } }
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 155 } }
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 186 } }
-                }
-            }
-            1167 = {
-                random_list = {
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 93 } }
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 124 } }
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 155 } }
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 186 } }
-                }
-            }
-            2664 = {
-                random_list = {
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 93 } }
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 124 } }
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 155 } }
-                    25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 186 } }
-                }
-            }
-        }
-        ai_will_do = { factor = 1 }
-    }
-
-    end_pearl_hunting = {
-        picture = bahrain_trade
-        potential = {
-            ai = yes
-            OR = {
-                1162 = {
-                    trade_goods = precious_goods
-                    NOT = { has_province_modifier = pearl_season }
-                }
-                1165 = {
-                    trade_goods = precious_goods
-                    NOT = { has_province_modifier = pearl_season }
-                }
-                1167 = {
-                    trade_goods = precious_goods
-                    NOT = { has_province_modifier = pearl_season }
-                }
-                2664 = {
-                    trade_goods = precious_goods
-                    NOT = { has_province_modifier = pearl_season }
-                }
-            }
-        }
-
-        allow = {
-        }
-
-
-        effect = {
-            any_country = {
-                limit = { owns = 1162 1162 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
-                1162 = { trade_goods = fruit }
-            }
-            any_country = {
-                limit = { owns = 1165 1165 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
-                1165 = { trade_goods = fish }
-            }
-            any_country = {
-                limit = { owns = 1167 1167 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
-                1167 = { trade_goods = fish }
-            }
-            any_country = {
-                limit = { owns = 2664 2664 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
-                2664 = { trade_goods = fish }
-            }
-        }
-        ai_will_do = { factor = 1 }
     }
 }

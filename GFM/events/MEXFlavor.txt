@@ -499,10 +499,10 @@ country_event = {
 
 country_event = {
     id = 44820
+	picture = "RGR_flag_big"
     title = "EVTNAME44820" #Republic of the Rio Grande
     desc = "EVTDESC44820"
 	major = yes
-    picture = "mexico_soldiers"
 
     fire_only_once = yes
 
@@ -550,6 +550,7 @@ country_event = {
                 casus_belli = annex_core_country
             }
         }
+		RGR = { country_event = 62010 }
         ai_chance = {
             factor = 90
             modifier = {
@@ -557,6 +558,37 @@ country_event = {
                 war = yes
             }
         }
+    }
+    option = {
+        name = "Freedom for the Riograndese!"
+        any_owned = {
+            limit = { is_core = RGR }
+            secede_province = RGR
+        }
+        RGR = {
+            any_pop = { militancy = -6 }
+            relation = {
+                who = USA
+                value = 50
+            }
+            relation = {
+                who = US2
+                value = 50
+            }
+            relation = {
+                who = TEX
+                value = 50
+            }
+            add_country_modifier = { name = unrecognized_country duration = 728 }
+        }
+        war = {
+            target = RGR
+            attacker_goal = {
+                casus_belli = annex_core_country
+            }
+        }
+        change_tag_no_core_switch = RGR
+		RGR = { country_event = 62010 }
     }
 
     option = {
@@ -637,6 +669,15 @@ country_event = {
                 casus_belli = annex_core_country
             }
         }
+		random_owned = {
+			limit = {
+				owner = {
+					owns = 2165
+					TBS = { exists = no }
+				}
+			}
+			owner = { country_event = { id = 960691 days = 60 } }
+		}
         ai_chance = {
             factor = 90
             modifier = {
@@ -1300,11 +1341,11 @@ country_event = {
             }
             modifier = {
                 factor = 4
-                USA = { AND = { NOT = { military_score = THIS } exists = USA } }
+                USA = { NOT = { military_score = THIS } exists = USA }
             }
             modifier = {
                 factor = 4
-                US2 = { AND = { NOT = { military_score = THIS } exists = US2 } }
+                US2 = { NOT = { military_score = THIS } exists = US2 }
             }
         }
     }
@@ -1518,10 +1559,6 @@ country_event = {
         tag = MEX
         year = 1855
 		has_country_modifier = santa_ana_rule
-		NOT = {
-			owns = 2662
-			owns = 102
-		}
     }
 
     mean_time_to_happen = { months = 3 }
@@ -1590,6 +1627,7 @@ country_event = {
 			defender_goal = { casus_belli = civil_war }
 			call_ally = no
 		}
+		ai_chance = { factor = 1 }
     }
 	option = {
         name = "Depose these heathens!"
@@ -1631,13 +1669,14 @@ country_event = {
 		}
 		MEE = { capital = 2172 }
 		define_general = { name = "Ignacio Zaragoza" personality = implacable background = cursed_luck }
-		change_tag_no_core_switch = MEE
 		war = {
-			target = MEX
+			target = MEE
 			attacker_goal = { casus_belli = civil_war }
 			defender_goal = { casus_belli = civil_war }
 			call_ally = no
 		}
+		change_tag_no_core_switch = MEE
+		ai_chance = { factor = 1 }
     }
 }
 
@@ -1769,7 +1808,17 @@ country_event = {
 			secede_province = MEE
 		}
 		MEX = { all_core = { add_core = MEE } }
-		MEE = { government = semi_constitutional_empire ruling_party_ideology = conservative }
+		MEE = { 
+			government = semi_constitutional_empire 
+			ruling_party_ideology = conservative
+			political_reform = non_secret_ballots
+			political_reform = culture_voting_only
+			political_reform = non_socialist
+			political_reform = censored_press
+			political_reform = yes_meeting
+			political_reform = state_equal_weight
+			political_reform = wealth_voting
+		}
 		create_alliance = MEE
 		diplomatic_influence = { who = MEE value = 400 }
 		relation = { who = MEE value = 400 }
@@ -1893,10 +1942,10 @@ country_event = {
 
     option = {
         name = "Huzzah!"
-		end_war = FRA
 		end_war = MEE
 		MEE = { all_core = { remove_core = MEE } }
 		MEE = { annex_to = MEX }
+		FRA = { country_event = 111023 }
     }
 }
 
@@ -1909,11 +1958,9 @@ country_event = {
     fire_only_once = yes
 
     option = {
-        name = "Splendid!"
-		MEX = { country_event = 111019 }
+        name = "Sacré Bleu!"
 		end_war = MEX
 		relation = { who = MEX value = 200 }
-		treasury = 80000
     }
 }
 

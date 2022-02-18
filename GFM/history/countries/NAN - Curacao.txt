@@ -1,6 +1,7 @@
 ## /history/countries/TAG Country.txt ##
 capital = 2234
 primary_culture = dutch
+culture = afro_dutch
 religion = protestant
 government = dominion
 plurality = 30
@@ -76,7 +77,7 @@ basic_chemistry = 1
 # Starting Consciouness
 consciousness = 1
 nonstate_consciousness = 0
-ruling_party = NAN_conservative
+ruling_party = NAN_conservative_1
 #last_election = YYYY.MM.DD
 upper_house = { #total 100
     radical = 0

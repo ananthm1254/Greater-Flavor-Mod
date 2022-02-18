@@ -43,64 +43,12 @@ country_event = {
         }
         FROM = {
             country_event = {
-                    id = 72757
-                }
+                id = 72757
+				days = 1
+            }
         }
         ai_chance = {
             factor = 100
-        }
-    }
-}
-
-
-
-country_event = {
-    id = 72757
-    title = "The Sardinian Border Blunder"
-    desc = "EVTDESC72757"
-    picture = map_trentin
-    is_triggered_only = yes
-
-    option = {
-        name = "Apologize Immediately!"
-        prestige = -10
-        FRA = {
-            country_event = {
-                id = 72756
-            }
-        }
-        ai_chance = {
-            factor = 75
-        }
-    }
-    option = {
-        name = "Sardinia's claim is valid."
-        473 = { add_core = SRD }
-        473 = { add_core = ITA }
-        SRD = {
-            add_accepted_culture = north_italian
-        }
-        relation = {
-            who = FRA
-            value = -80
-        }
-        FRA = {
-            add_casus_belli = {
-                target = THIS
-                type = free_allied_cores
-                months = 12
-            }
-            country_event = {
-                id = 72755
-            }
-        }
-        add_casus_belli = {
-            target = FRA
-            type = humiliate
-            months = 12
-        }
-        ai_chance = {
-            factor = 25
         }
     }
 }
@@ -146,104 +94,6 @@ country_event = {
         }
         ai_chance = {
             factor = 100
-        }
-    }
-}
-
-country_event = {
-    id = 72754
-    title = "The Question of the Italian Crown"
-    desc = EVTDESC72754
-	picture = "corona_incisa"
-    major = yes
-    fire_only_once = yes
-
-    trigger = {
-        OR = {
-            tag = AUS
-            tag = AUB
-            tag = KUK
-            tag = DNB
-        }
-        has_country_flag = austrian_outside_italy
-        NOT = { exists = ITA }
-		NOT = { exists = ITS }
-        PAP = { vassal_of = THIS }
-        SIC = { vassal_of = THIS }
-        SRD = { vassal_of = THIS }
-        LOM = { vassal_of = THIS }
-        war = no
-        nationalism_n_imperialism = 1
-        year = 1870
-    }
-
-    mean_time_to_happen = {
-        months = 12
-    }
-
-    option = {
-        name = "To the Lombards!"
-        LOM = {
-            inherit = PAP
-            inherit = SIC
-            inherit = SRD
-            change_tag = ITA
-            add_accepted_culture = south_italian
-        }
-        ITA = { set_country_flag = AUS_ITA_treaty }
-        ai_chance = {
-            factor = 25
-        }
-    }
-    option = {
-        name = "To the Sicilians!"
-        SIC = {
-            inherit = LOM
-            inherit = PAP
-            inherit = SRD
-            change_tag = ITS
-            add_accepted_culture = north_italian
-        }
-        ITS = { set_country_flag = AUS_ITA_treaty }
-        ITA = { all_core = { add_core = ITS } }
-        ITA = { all_core = { remove_core = ITA } }
-        set_global_flag = ITS_form
-        ai_chance = {
-            factor = 25
-        }
-    }
-    option = {
-        name = "To His Holiness the Pope!"
-        PAP = {
-            inherit = LOM
-            inherit = SIC
-            inherit = SRD
-            change_tag = ITA
-            primary_culture = north_italian
-            add_accepted_culture = south_italian
-        }
-        ITA = { set_country_flag = AUS_ITA_treaty }
-        any_pop = {
-                limit = {
-                    religion = catholic
-                }
-                consciousness = -6
-        }
-        ai_chance = {
-            factor = 50
-        }
-    }
-    option = {
-        name = "For Metternich's Sake! Keep the Status Quo!"
-        any_pop = {
-            limit = {
-                ideology = conservative
-                is_primary_culture = yes
-            }
-            consciousness = -3
-        }
-        ai_chance = {
-            factor = 0
         }
     }
 }
@@ -385,6 +235,7 @@ country_event = {
             }
             country_event = {
                 id = 72665
+				days = 1
             }
         }
         ai_chance = {
@@ -439,6 +290,7 @@ country_event = {
             }
             country_event = {
                 id = 72665
+				days = 1
             }
         }
         ai_chance = {
@@ -493,6 +345,7 @@ country_event = {
             }
             country_event = {
                 id = 72665
+				days = 1
             }
         }
         ai_chance = {
@@ -547,6 +400,7 @@ country_event = {
             }
             country_event = {
                 id = 72665
+				days = 1
             }
         }
         ai_chance = {
@@ -601,6 +455,7 @@ country_event = {
             }
             country_event = {
                 id = 72665
+				days = 1
             }
         }
         ai_chance = {
@@ -869,7 +724,7 @@ country_event = {
                 is_greater_power = yes
             }
             modifier = {
-                factor = 1
+                factor = 1.2
                 war_policy = jingoism
             }
             modifier = {
@@ -903,7 +758,7 @@ country_event = {
         ai_chance = {
             factor = 60
             modifier = {
-                factor = 1
+                factor = 1.2
                 war_policy = pacifism
             }
             modifier = {
@@ -1045,7 +900,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "Such is the life of a spherling."
+        name = "Such is the life of a sphereling."
         THIS = {
             any_owned = {
                 limit = { is_core = WSF }
@@ -1202,9 +1057,14 @@ country_event = { ####Options####
                 }
             }
             modifier = {
-                factor = 1
+                factor = 0
+                ROM = { vassal_of = THIS }
+                HUN = { NOT = { vassal_of = THIS } }
+            }
+            modifier = {
+                factor = 0
+                ROM = { vassal_of = THIS }
                 HUN = { vassal_of = THIS }
-                ROM = { NOT = { vassal_of = THIS } }
             }
         }
     }
@@ -1228,9 +1088,14 @@ country_event = { ####Options####
                 }
             }
             modifier = {
-                factor = 1
+                factor = 0
+                HUN = { vassal_of = THIS }
+                ROM = { NOT = { vassal_of = THIS } }
+            }
+            modifier = {
+                factor = 0
                 ROM = { vassal_of = THIS }
-                HUN = { NOT = { vassal_of = THIS } }
+                HUN = { vassal_of = THIS }
             }
         }
     }
@@ -1242,11 +1107,6 @@ country_event = { ####Options####
         ROM = { country_event = 71429739 }
         ai_chance = {
             factor = 50
-            modifier = {
-                factor = 1
-                ROM = { vassal_of = THIS }
-                HUN = { vassal_of = THIS }
-            }
         }
     }
 
@@ -1330,6 +1190,10 @@ country_event = { ####Romania hears support for Hungary####
                 factor = 0
                 vassal_of = FROM
             }
+            modifier = {
+                factor = 0
+                is_disarmed = yes
+            }
         }
     }
 
@@ -1351,6 +1215,10 @@ country_event = { ####Romania hears support for Hungary####
                 factor = 0
                 vassal_of = FROM
             }
+            modifier = {
+                factor = 0
+                is_disarmed = yes
+            }
         }
     }
 
@@ -1360,7 +1228,7 @@ country_event = { ####Romania hears support for Hungary####
         badboy = -4
         any_pop = {
             limit = {
-                issue = jingoism
+                pop_majority_issue = jingoism
             }
             militancy = 6
             consciousness = 6
@@ -1382,14 +1250,6 @@ country_event = { ####Romania hears support for Hungary####
             modifier = {
                 factor = 0.75
                 truce_with = FROM
-            }
-            modifier = {
-                factor = 1
-                is_disarmed = yes
-            }
-            modifier = {
-                factor = 1
-                vassal_of = FROM
             }
         }
     }
@@ -1416,11 +1276,12 @@ country_event = { ####Romania's rebuttal####
         ai_chance = {
             factor = 75
             modifier = {
-                factor = 1
-                OR = {
-                    war_policy = anti_military
-                    war_policy = pacifism
-                }
+                factor = 0.5
+                war_policy = pacifism
+            }
+			modifier = {
+                factor = 0.75
+                war_policy = anti_military
             }
         }
     }
@@ -1450,6 +1311,10 @@ country_event = { ####Romania's rebuttal####
             modifier = {
                 factor = 0.5
                 war_policy = jingoism
+            }
+			modifier = {
+                factor = 0.75
+                war_policy = pro_military
             }
         }
     }
@@ -1490,8 +1355,8 @@ country_event = { ####Romania's request for money####
         ai_chance = {
             factor = 50
             modifier = {
-                factor = 1
-                money = 100001
+                factor = 0
+                NOT = { money = 100001 }
             }
         }
     }
@@ -1508,8 +1373,8 @@ country_event = { ####Romania's request for money####
         ai_chance = {
             factor = 50
             modifier = {
-                factor = 1
-                NOT = { money = 100001 }
+                factor = 0
+                money = 100001
             }
         }
     }
@@ -1555,7 +1420,7 @@ country_event = { ####Romania hears request for money approved####
         money = 100000
         any_pop = {
             limit = {
-                issue = jingoism
+                pop_majority_issue = jingoism
             }
             militancy = 6
             consciousness = 6
@@ -1617,7 +1482,7 @@ country_event = { ####Hungary favored treaty of Transvana signed###
         prestige = 5
         any_pop = {
             limit = {
-                issue = jingoism
+                pop_majority_issue = jingoism
             }
             militancy = -5
             consciousness = -5
@@ -1673,6 +1538,10 @@ country_event = { #Hungary hears support for Romania
                 factor = 0
                 vassal_of = FROM
             }
+            modifier = {
+                factor = 0
+                is_disarmed = yes
+            }
         }
     }
 
@@ -1694,6 +1563,10 @@ country_event = { #Hungary hears support for Romania
                 factor = 0
                 vassal_of = FROM
             }
+            modifier = {
+                factor = 0
+                is_disarmed = yes
+            }
         }
     }
 
@@ -1703,7 +1576,7 @@ country_event = { #Hungary hears support for Romania
         badboy = -4
         any_pop = {
             limit = {
-                issue = jingoism
+                pop_majority_issue = jingoism
             }
             militancy = 6
             consciousness = 6
@@ -1725,14 +1598,6 @@ country_event = { #Hungary hears support for Romania
             modifier = {
                 factor = 0.75
                 truce_with = FROM
-            }
-            modifier = {
-                factor = 1
-                is_disarmed = yes
-            }
-            modifier = {
-                factor = 1
-                vassal_of = FROM
             }
         }
     }
@@ -1773,14 +1638,16 @@ country_event = { ####Hungary's rebuttal####
             who = ROM
             value = -50
         }
+        
         ai_chance = {
             factor = 75
             modifier = {
-                factor = 1
-                OR = {
-                    war_policy = anti_military
-                    war_policy = pacifism
-                }
+                factor = 0.5
+                war_policy = pacifism
+            }
+			modifier = {
+                factor = 0.75
+                war_policy = anti_military
             }
         }
     }
@@ -1810,6 +1677,10 @@ country_event = { ####Hungary's rebuttal####
             modifier = {
                 factor = 0.5
                 war_policy = jingoism
+            }
+			modifier = {
+                factor = 0.75
+                war_policy = pro_military
             }
         }
     }
@@ -1850,8 +1721,8 @@ country_event = { ####Hungary's request for money####
         ai_chance = {
             factor = 50
             modifier = {
-                factor = 1
-                money = 100001
+                factor = 0
+                NOT = { money = 100001 }
             }
         }
     }
@@ -1868,8 +1739,8 @@ country_event = { ####Hungary's request for money####
         ai_chance = {
             factor = 50
             modifier = {
-                factor = 1
-                NOT = { money = 100001 }
+                factor = 0
+                money = 100001
             }
         }
     }
@@ -1915,7 +1786,7 @@ country_event = { ####Hungary hears request for money approved####
         money = 100000
         any_pop = {
             limit = {
-                issue = jingoism
+                pop_majority_issue = jingoism
             }
             militancy = 6
             consciousness = 6
@@ -1978,7 +1849,7 @@ country_event = { ####Romania favored treaty of Transvana signed###
         prestige = 5
         any_pop = {
             limit = {
-                issue = jingoism
+                pop_majority_issue = jingoism
             }
             militancy = -5
             consciousness = -5
@@ -2000,7 +1871,7 @@ country_event = { ####countries hear of Partition####
         prestige = -5
         any_pop = {
             limit = {
-                issue = jingoism
+                pop_majority_issue = jingoism
             }
             militancy = 3
             consciousness = 3
@@ -2010,14 +1881,6 @@ country_event = { ####countries hear of Partition####
             modifier = {
                 factor = 0.75
                 truce_with = FROM
-            }
-            modifier = {
-                factor = 1
-                is_disarmed = yes
-            }
-            modifier = {
-                factor = 1
-                vassal_of = FROM
             }
         }
     }
@@ -2049,6 +1912,10 @@ country_event = { ####countries hear of Partition####
             modifier = {
                 factor = 0
                 vassal_of = FROM
+            }
+            modifier = {
+                factor = 0
+                is_disarmed = yes
             }
         }
     }
@@ -2089,11 +1956,12 @@ country_event = { ####result of HUN no/Rom yes
         ai_chance = {
             factor = 75
             modifier = {
-                factor = 1
-                OR = {
-                    war_policy = anti_military
-                    war_policy = pacifism
-                }
+                factor = 0.5
+                war_policy = pacifism
+            }
+			modifier = {
+                factor = 0.75
+                war_policy = anti_military
             }
         }
     }
@@ -2129,6 +1997,10 @@ country_event = { ####result of HUN no/Rom yes
             modifier = {
                 factor = 0.5
                 war_policy = jingoism
+            }
+			modifier = {
+                factor = 0.75
+                war_policy = pro_military
             }
         }
     }
@@ -2167,11 +2039,12 @@ country_event = { ####result of ROM no/Hun yes
         ai_chance = {
             factor = 75
             modifier = {
-                factor = 1
-                OR = {
-                    war_policy = anti_military
-                    war_policy = pacifism
-                }
+                factor = 0.5
+                war_policy = pacifism
+            }
+			modifier = {
+                factor = 0.75
+                war_policy = anti_military
             }
         }
     }
@@ -2207,6 +2080,10 @@ country_event = { ####result of ROM no/Hun yes
             modifier = {
                 factor = 0.5
                 war_policy = jingoism
+            }
+			modifier = {
+                factor = 0.75
+                war_policy = pro_military
             }
         }
     }
@@ -2251,11 +2128,12 @@ country_event = { ####result of ROM no/Hun no
         ai_chance = {
             factor = 75
             modifier = {
-                factor = 1
-                OR = {
-                    war_policy = anti_military
-                    war_policy = pacifism
-                }
+                factor = 0.5
+                war_policy = pacifism
+            }
+			modifier = {
+                factor = 0.75
+                war_policy = anti_military
             }
         }
     }
@@ -2313,6 +2191,10 @@ country_event = { ####result of ROM no/Hun no
             modifier = {
                 factor = 0.5
                 war_policy = jingoism
+            }
+			modifier = {
+                factor = 0.75
+                war_policy = pro_military
             }
         }
     }

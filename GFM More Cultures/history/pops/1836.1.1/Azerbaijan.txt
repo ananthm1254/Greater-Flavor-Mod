@@ -59,8 +59,20 @@
     farmers = {
         culture = azerbaijani
         religion = shiite
-        size = 10500
+        size = 9800
     }
+	
+	farmers = {
+        culture = molokan
+        religion = orthodox
+        size = 200
+    }
+	
+	farmers = {
+		culture = shahsevan
+		religion = shiite
+		size = 500
+	}
 
     aristocrats = {
         culture = talysh
@@ -176,8 +188,20 @@
     farmers = {
         culture = azerbaijani
         religion = shiite
-        size = 13350
+        size = 11750
     }
+
+    farmers = {
+        culture = molokan
+        religion = orthodox
+        size = 1100
+    }
+	
+	farmers = {
+		culture = shahsevan
+		religion = shiite
+		size = 700
+	}
 	
 	farmers = {
         culture = dagestani
@@ -341,8 +365,14 @@
     farmers = {
         culture = azerbaijani
         religion = shiite
-        size = 12180
+        size = 11880
     }
+	
+	farmers = {
+		culture = shahsevan
+		religion = shiite
+		size = 300
+	}
 }
 
 #Quba
@@ -380,7 +410,13 @@
 	farmers = {
         culture = lezgin
         religion = animist
-        size = 7000
+        size = 6920
+    }
+	
+	farmers = {
+        culture = molokan
+        religion = orthodox
+        size = 80
     }
 	
 	aristocrats = {
@@ -434,8 +470,14 @@
     farmers = {
         culture = azerbaijani
         religion = shiite
-        size = 1190
+        size = 1090
     }
+	
+	farmers = {
+		culture = shahsevan
+		religion = shiite
+		size = 100
+	}
 }
 #Sheki (24000/6000 POPS)
 1104 = {
@@ -564,8 +606,14 @@
     farmers = {
         culture = azerbaijani
         religion = shiite
-        size = 33100
+        size = 31900
     }
+	
+	farmers = {
+		culture = shahsevan
+		religion = shiite
+		size = 1200
+	}
 
     aristocrats = {
         culture = armenian
@@ -594,7 +642,13 @@
     farmers = {
         culture = armenian
         religion = coptic
-        size = 12425
+        size = 12025
+    }
+	
+	farmers = {
+        culture = molokan
+        religion = orthodox
+        size = 400
     }
 }
 #Agdam (60000/15000 POPS)
@@ -686,8 +740,20 @@
 	farmers = {
         culture = azerbaijani
         religion = shiite
-        size = 7475
+        size = 4175
     }
+	
+	farmers = {
+		culture = qajar
+		religion = shiite
+		size = 900
+	}
+	
+	farmers = {
+		culture = shahsevan
+		religion = shiite
+		size = 2400
+	}
 }
 #Lankaran (56000/14000 POPS)
 1107 = {
@@ -718,14 +784,26 @@
     farmers = {
         culture = talish
         religion = shiite
-        size = 33000
+        size = 32700
+    }
+	
+	farmers = {
+        culture = molokan
+        religion = orthodox
+        size = 300
     }
 
     farmers = {
         culture = azerbaijani
         religion = shiite
-        size = 5800
+        size = 5400
     }
+	
+	farmers = {
+		culture = shahsevan
+		religion = shiite
+		size = 400
+	}
 
 }
 
