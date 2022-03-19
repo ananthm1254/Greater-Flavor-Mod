@@ -1,3 +1,89 @@
+country_event = { #Chilean revolt that motivates attacking PBC
+    id = 123955
+    title = "The Quillota Mutiny"
+    desc = "QUILLOTAMUTINY"
+    picture = "portales_death"
+	major = yes
+    trigger = {
+        tag = CHL
+        year = 1837
+		month = 6
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen =  {
+        days = 1
+    }
+
+    option = { 
+        name = "Is it possible, soldiers, that you shoot at me?"
+		country_event = { id = 97050 days = 7 }
+    }
+
+}
+country_event = { #Prussian Expedition to Egypt
+    id = 123954
+    title = "A Prussian Expedition to Egypt?"
+    desc = "PRUEXPEGY"
+    picture = "lepsius_expedition"
+    trigger = {
+        tag = PRU
+        year = 1842
+		NOT = { year = 1845 }
+        is_greater_power = yes
+		1750 = { owner = { NOT = { war_with = THIS truce_with = THIS } } }
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen =  {
+        months = 3
+    }
+
+    option = { #Finance the Expedition
+
+        name = "Fincance the expedition."
+        treasury = -50000
+        prestige = 10
+        ai_chance = {
+            factor = 1
+            modifier = { 
+                factor = 0
+                NOT = { money = 50000 } 
+            }
+        }
+
+    }
+
+    option = { #Don't Finance the Expedition
+
+        name = "We don't have the money."
+        prestige = -5
+        ai_chance = {
+            factor = 1
+            modifier = { 
+                factor = 0 
+                money = 50000
+            }
+        }
+
+    }
+
+}
+country_event = {
+	id = 123429
+	title = "The Soviet takeover"
+	desc = "The filthy communists have overthrown our government. We must now lay low and lick our wounds to prepare for toppling their regime."
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+        name = "Bolshevik scum!"
+		government = presidential_dictatorship
+    }
+	
+}
 country_event = {
 	id = 123953
 	title = "$FROMCOUNTRY$ seizes Bouvet Island"
@@ -9513,6 +9599,10 @@ country_event = {
 					province_id = 2307
 					province_id = 2309
 					province_id = 2305
+					province_id = 3554
+					province_id = 2370
+					province_id = 1714
+					province_id = 2375
 					province_id = 2322
 				}
             }
@@ -9524,6 +9614,7 @@ country_event = {
             attacker_goal = { casus_belli = civil_war }
             defender_goal = { casus_belli = civil_war }
         }
+		set_global_flag = 1891_civwarchi
 		CHR = { ruling_party_ideology = conservative government = prov_gov_conservative }
     }
     option = {
@@ -9537,6 +9628,10 @@ country_event = {
 					province_id = 2307
 					province_id = 2309
 					province_id = 2305
+					province_id = 3554
+					province_id = 2370
+					province_id = 1714
+					province_id = 2375
 					province_id = 2322
 				}
             }
@@ -9551,6 +9646,7 @@ country_event = {
 		CHR = { ruling_party_ideology = conservative government = prov_gov_conservative }
         change_tag_no_core_switch = CHR
 		CHR = { ruling_party_ideology = conservative }
+		set_global_flag = 1891_civwarchi
     }
 }
 country_event = { #chilean revolt core removal
@@ -9799,12 +9895,22 @@ country_event = {
     trigger = {
         owns = 2195
         exists = MSK
-        NOT = { MSK = { owns = 2200 } }
-        NOT = { MSK = { owns = 3491 } }
-        MSK = { owns = 2196 }
+		OR = {
+			AND = {
+				NOT = { MSK = { owns = 2200 } }
+				NOT = { MSK = { owns = 3491 } }
+				MSK = { owns = 2196 }
+			}
+			AND = {
+				NIC = { owns = 2200 }
+				MSK = { owns = 3491 }
+				MSK = { owns = 2196 }				
+			}
+		}
     }
     option = {
         name = "Annex them!"
+        inherit = MSK
         any_pop = {
             limit = {
                 has_pop_culture = native_american_minor
@@ -9812,7 +9918,17 @@ country_event = {
             consciousness = 5
             militancy = 5
         }
-        inherit = MSK
+		random_owned = {
+			limit = {
+				owner = {
+					owns = 3491
+					NIC = { owns = 2200 }
+				}
+			}
+			owner = {
+				3491 = { secede_province = NIC }
+			}
+		}
     }
 }
 country_event = {

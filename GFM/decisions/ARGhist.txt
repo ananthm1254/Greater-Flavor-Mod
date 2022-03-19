@@ -4,6 +4,7 @@ political_decisions = {
         picture = conquest_of_the_desert
         potential = {
             OR = {
+				tag = HSA
                 tag = ARG
                 tag = ARC
                 tag = LPL
@@ -157,6 +158,7 @@ political_decisions = {
                 tag = PRG
                 tag = CHL
                 tag = URU
+				tag = HSA
             }
             OR = {
                 2362 = { empty = yes }
@@ -208,7 +210,6 @@ political_decisions = {
                     any_pop = { limit = { is_primary_culture = no } literacy = -0.99 }
                 }
             }
-
             random_owned = {
                 limit = {
                     2365 = { empty = yes }
@@ -252,6 +253,19 @@ political_decisions = {
                         name = recently_built_city
                         duration = 365
                     }
+                }
+            }
+            random_owned = {
+                limit = {
+                    2367 = { empty = yes }
+                    2364 = { empty = no }
+                    2365 = { empty = no }
+                }
+                2367 = {
+                    secede_province = THIS
+                    add_core = THIS
+                    life_rating = 20
+                    any_pop = { limit = { is_primary_culture = no } literacy = -0.99 }
                 }
             }
         }
@@ -460,6 +474,7 @@ political_decisions = {
                 tag = ARC
                 tag = ARG
                 tag = LPL
+				tag = HSA
             }
             NOT = { has_country_flag = claimed_argentinian_chaco }
             2362 = { empty = no }
@@ -1298,6 +1313,20 @@ political_decisions = {
                 }
                 2338 = { secede_province = UTI }
             }
+            random_owned = {
+                limit = {
+                    province_id = 3569
+                    is_colonial = no
+                }
+                3569 = { secede_province = UTI }
+            }
+            random_owned = {
+                limit = {
+                    province_id = 3570
+                    is_colonial = no
+                }
+                3570 = { secede_province = UTI }
+            }
 			inherit = UTI
         }
 
@@ -1339,5 +1368,89 @@ political_decisions = {
         }
 
         ai_will_do = { factor = 1 }
+    }
+
+    modernize_navy = {
+        picture = beiyang_fleet
+        potential = {
+            OR = {
+			    tag = ARG
+				tag = ARC
+				tag = LPL
+			}
+            year = 1870
+            NOT = { has_country_flag = navy_modernized }
+        }
+
+        allow = {
+            OR = {
+                revolution_n_counterrevolution = 1
+				year = 1872
+			}
+			OR = {
+			    money = 50000
+				ai = yes
+			}
+			war = no
+		}
+
+        effect = {
+            set_country_flag = navy_modernized
+			random_owned = {
+			    limit = {
+				    owner = { ai = no }
+				}
+				treasury = -50000
+			}
+			ENG = { treasury = 50000 }
+			years_of_research = 0.5
+			relation = {
+			    who = ENG
+				value = 50
+			}
+            add_country_modifier = { name = naval_school duration = -1 }
+            activate_technology = battleship_column_doctrine
+			activate_technology = clipper_design
+            activate_technology = steamers
+            activate_technology = alphabetic_flag_signaling
+            activate_technology = iron_steamers
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    sarmiento_school_reforms = {
+		picture = sarmiento_schools
+        potential = {
+            OR = {
+                tag = ARG
+                tag = ARC
+				tag = LPL
+            }
+            NOT = { has_country_flag = sarmiento }
+			NOT = { school_reforms = acceptable_schools }
+			NOT = { school_reforms = good_schools }
+			year = 1870
+        }
+        allow = {
+		    OR = {
+                revolution_n_counterrevolution = 1
+				year = 1872
+			}
+            ruling_party_ideology = conservative
+            NOT = { school_reforms = low_schools }
+			NOT = { school_reforms = acceptable_schools }
+			NOT = { school_reforms = good_schools }
+        }
+        effect = {
+		    set_country_flag = sarmiento
+		    years_of_research = 0.1
+            social_reform = low_schools
+            any_pop = {
+			    limit = {
+				    type = clergymen 
+				}
+				reduce_pop = 1.05 
+			} 
+        }
     }
 }

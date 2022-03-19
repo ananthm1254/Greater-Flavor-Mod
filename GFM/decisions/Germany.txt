@@ -340,7 +340,7 @@ political_decisions = {
         }
 
         allow = {
-            expressionism = 1
+            impressionism = 1
         }
 
         effect = {
@@ -485,7 +485,6 @@ political_decisions = {
             533 = {
                 add_core = THIS # Heligoland is my last territorial demand!
                 add_core = ENG
-                remove_core = HGL
                 change_province_name = "Helgoland"
             }
             set_country_flag = has_questioned_heligoland
@@ -1282,6 +1281,30 @@ political_decisions = {
                 factor = 0
                 badboy = 0.8
             }
+        }
+    }
+	neues_museum_berlin = {
+        picture = neues_museum
+        potential = {
+            owns = 549
+			NOT = { has_country_flag = neues_trolling }
+			tag = PRU
+        }
+
+        allow = {
+            war = no
+            idealism = 1
+			money = 50000
+        }
+
+        effect = {
+            prestige = 5
+			treasury = -50000
+			set_country_flag = neues_trolling
+        }
+
+        ai_will_do = {
+            factor = 1
         }
     }
 }
